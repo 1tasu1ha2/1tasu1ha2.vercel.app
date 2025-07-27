@@ -4,7 +4,7 @@ import random, emoji
 
 app = FastAPI(docs_url=None, redoc_url=None, openapi_url=None)
 
-@app.post("/api/random-emoji")
+@app.get("/api/random-emoji")
 def random_emoji(length: int=1):
     res = JSONResponse(content={
         "success": True,
