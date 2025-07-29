@@ -31,7 +31,7 @@ def random_string(length: str="1"):
         if num.is_integer() and num>0:
             return JSONResponse(content={
                 "success": True,
-                "result": "".join(random.choices(string.ascii_letters+string.ascii_lowercase+string.ascii_uppercase, k=int(num)))
+                "result": "".join(random.choices(string.ascii_letters+string.digits, k=int(num)))
             })
         else:
             raise ValueError
