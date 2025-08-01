@@ -1,2 +1,3 @@
 fastapi
 emoji
+emoji_data_python
