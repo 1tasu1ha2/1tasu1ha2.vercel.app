@@ -1,4 +1,4 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, Request
 from fastapi.responses import JSONResponse
 from starlette.middleware.cors import CORSMiddleware
 import random, emoji, string
@@ -44,7 +44,10 @@ def random_string(length: str="1"):
         }, status_code=400)
 
 @app.post("/api/join")
-async def join(token: str, invite: str):
+async def join(request: Request):
+    body = await request.json()
+    token = body.get("token")
+    invite = body.get("invite")
     try:
         if not token and invite:
             return JSONResponse(content={
