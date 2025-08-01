@@ -1,8 +1,7 @@
 from fastapi import FastAPI
 from fastapi.responses import JSONResponse
 from starlette.middleware.cors import CORSMiddleware
-import random, string
-import emoji_data_python
+import random, string, emoji_data_python
 
 app = FastAPI(docs_url=None, redoc_url=None, openapi_url=None)
 
