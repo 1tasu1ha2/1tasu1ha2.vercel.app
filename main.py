@@ -69,13 +69,13 @@ async def join(request: Request):
         headers = {
             "authority": "discord.com",
             "accept": "*/*",
-            "accept-language": "en",
+            "accept-language": "ja",
             "authorization": token,
             "content-type": "application/json",
-            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) discord/1.0.9168 Chrome/128.0.6613.36 Electron/32.0.0 Safari/537.36",
-            "x-discord-locale": "en-US",
+            "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.4 Safari/605.1.15",
+            "x-discord-locale": "ja",
             "x-debug-options": "bugReporterEnabled",
-            "x-super-properties": "eyJvcyI6ICJXaW5kb3dzIiwgImJyb3dzZXIiOiAiRGlzY29yZCBDbGllbnQiLCAicmVsZWFzZV9jaGFubmVsIjogInN0YWJsZSIsICJjbGllbnRfdmVyc2lvbiI6ICIxLjAuOTE2OCIsICJvc192ZXJzaW9uIjogIjEwLjAuMTkwNDUiLCAic3lzdGVtX2xvY2FsZSI6ICJlbiIsICJicm93c2VyX3VzZXJfYWdlbnQiOiAiTW96aWxsYS81LjAgKFdpbmRvd3MgTlQgMTAuMDsgV2luNjQ7IHg2NCkgQXBwbGVXZWJLaXQvNTM3LjM2IChLSFRNTCwgbGlrZSBHZWNrbykgZGlzY29yZC8xLjAuOTE2OCBDaHJvbWUvMTI4LjAuNjYxMy4zNiBFbGVjdHJvbi8zMi4wLjAgU2FmYXJpLzUzNy4zNiIsICJicm93c2VyX3ZlcnNpb24iOiAiMzIuMC4wIiwgImNsaWVudF9idWlsZF9udW1iZXIiOiAzMzkyMjEsICJuYXRpdmVfYnVpbGRfbnVtYmVyIjogNTQwMzksICJjbGllbnRfZXZlbnRfc291cmNlIjogbnVsbH0="
+            "x-super-properties": "eyJvcyI6ImlPUyIsImJyb3dzZXIiOiJNb2JpbGUgU2FmYXJpIiwiZGV2aWNlIjoiIiwic3lzdGVtX2xvY2FsZSI6ImphIiwiaGFzX2NsaWVudF9tb2RzIjpmYWxzZSwiYnJvd3Nlcl91c2VyX2FnZW50IjoiTW96aWxsYS81LjAgKE1hY2ludG9zaDsgSW50ZWwgTWFjIE9TIFggMTBfMTVfNykgQXBwbGVXZWJLaXQvNjA1LjEuMTUgKEtIVE1MLCBsaWtlIEdlY2tvKSBWZXJzaW9uLzE4LjQgU2FmYXJpLzYwNS4xLjE1IiwiYnJvd3Nlcl92ZXJzaW9uIjoiMTguNCIsIm9zX3ZlcnNpb24iOiIxMC4xNS43IiwicmVmZXJyZXIiOiIiLCJyZWZlcnJpbmdfZG9tYWluIjoiIiwicmVmZXJyZXJfY3VycmVudCI6IiIsInJlZmVycmluZ19kb21haW5fY3VycmVudCI6IiIsInJlbGVhc2VfY2hhbm5lbCI6InN0YWJsZSIsImNsaWVudF9idWlsZF9udW1iZXIiOjQyNTQ4NywiY2xpZW50X2V2ZW50X3NvdXJjZSI6bnVsbCwiY2xpZW50X2xhdW5jaF9pZCI6ImE4ZmJiNzIzLTk3MTktNDM2Ni1iZWYwLTIxODNkZjhiYTliNiIsImxhdW5jaF9zaWduYXR1cmUiOiIyNDNjNjJlMC0wMjZhLTQ0ZjctOTAxOC1hMmFiZDBjYWYxOGYiLCJjbGllbnRfaGVhcnRiZWF0X3Nlc3Npb25faWQiOiI3NmU5YjczYS00ZDc0LTQ0NmMtODFlYS0zMTI3ZjgxZGFiMGUiLCJjbGllbnRfYXBwX3N0YXRlIjoiZm9jdXNlZCJ9"
         }
         data = {
             "session_id": uuid4().hex
