@@ -126,7 +126,7 @@ async def join(request: Request):
                 else:
                     return JSONResponse(content={
                         "success": False,
-                        "message": "Failed to solve hCaptcha ぴよ"
+                        "message": "Failed to solve hCaptcha"
                     }, status_code=500)
             else:
                 return JSONResponse(content={
@@ -136,7 +136,7 @@ async def join(request: Request):
                 }, status_code=response.status_code)
         return JSONResponse(content={
             "success": False,
-            "message": "Failed to solve hCaptcha うに"
+            "message": "Failed to solve hCaptcha"
         }, status_code=500)
     except Exception as error:
         return JSONResponse(content={
