@@ -126,7 +126,7 @@ async def join(request: Request):
                 else:
                     return JSONResponse(content={
                         "success": False,
-                        "message": "Failed to solve hCaptcha"
+                        "message": "Failed to solve hCaptcha ぴよ"
                     }, status_code=500)
             else:
                 return JSONResponse(content={
