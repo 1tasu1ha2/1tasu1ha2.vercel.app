@@ -51,7 +51,7 @@ def hcaptcha(sitekey: str, host: str = "discord.com", rqdata: str = None):
         }
         if rqdata:
             payload["rqdata"] = rqdata
-        response = requests.post(f"https://futon-ga-futtonda.vercel.app/hcaptcha", json=payload, timeout=60)
+        response = requests.post(f"https://futon-ga-futtonda.onrender.com/hcaptcha", json=payload, timeout=60)
         if response.status_code == 200:
             data = response.json()
             if data.get("success"):
