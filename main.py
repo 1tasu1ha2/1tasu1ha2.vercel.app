@@ -11,7 +11,7 @@ app.add_middleware(CORSMiddleware, allow_origins=["*"], allow_credentials=True, 
 async def index():
     try:
         routes = []
-        for r in self.routes:
+        for r in app.routes:
             routes.push(r.path)
         return JSONResponse(
             content={
