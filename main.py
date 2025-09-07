@@ -10,14 +10,11 @@ app.add_middleware(CORSMiddleware, allow_origins=["*"], allow_credentials=True, 
 @app.get('/api')
 async def index():
     try:
-        routes = []
-        for r in app.routes:
-            routes.push(r.path)
         return JSONResponse(
             content={
                 'success': True,
                 'data': {
-                    'routes': routes
+                    'routes': [r.path for r in app.routes]
                 }
             },
             status_code=200
