@@ -7,7 +7,33 @@ app = FastAPI(docs_url=None, redoc_url=None, openapi_url=None)
 
 app.add_middleware(CORSMiddleware, allow_origins=["*"], allow_credentials=True, allow_methods=["*"], allow_headers=["*"])
 
-@self.get('/api/random/alphanumeric')
+@app.get('/api')
+async def index():
+    try:
+        routes = []
+        for r in self.routes:
+            routes.push(r.path)
+        return JSONResponse(
+            content={
+                'success': True,
+                'data': {
+                    'routes': routes
+                }
+            },
+            status_code=200
+        )
+    except Exception as err:
+        return JSONResponse(
+            content={
+                'success': False,
+                'data': {
+                    'message': str(err)
+                }
+            },
+            status_code=500
+        )
+
+@app.get('/api/random/alphanumeric')
 async def random_alphanumeric(
     length: int=1,
     uppercase: bool=True,
@@ -63,7 +89,7 @@ async def random_alphanumeric(
             status_code=500
         )
 
-@self.get('/api/random/emoji')
+@app.get('/api/random/emoji')
 async def random_emoji(
     length: int=1
 ):
